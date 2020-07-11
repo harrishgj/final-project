@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+<head>
+<title>final project</title>
+<script>
+function insertValue(x)
+{
+document.myform.inputVal.value =
+document.myform.inputVal.value+x;
+}
+function clearVal()
+{
+document.myform.inputVal.value = "";
+}
+function claculate()
+{
+var expression = document.myform.inputVal.value;
+document.myform.inputVal.value = eval(expression);
+}
+</script>
+<style>
+
+body{
+margin-left:400px;
+margin-top:70px;
+background-repeat:no-repeat;
+margin-bottom:500px;
+background-image: url('https://t4.ftcdn.net/jpg/02/65/63/19/240_F_265631989_ocCNq7mkTZ6wUYYbu9clTMEsbpDNWyyA.jpg');
+background-size: cover;
+padding-top:10%;
+padding-left: 0ex;
+padding-right: 10ex;
+}
+#btn1{
+height:100px;
+width:160px;
+font-family:calisto mt;
+font-weight:bold;
+font-size:30px;
+border-radius:6px;
+background-color:#770c4b;
+color:whitesmoke;
+border:none;
+margin-left:10px;
+margin-top:10px;
+
+}
+#btn1:hover,#btn2:hover{
+box-shadow: 8px 8px 13px black;
+cursor:pointer;
+color:#48dbee;
+}
+#btn2{
+height:100px;
+width:160px;
+font-family:calisto mt;
+font-weight:bold;
+font-size:50px;
+border-radius:6px;
+background-color:#770c4b;
+color:white;
+border:none;
+margin-left:10px;
+margin-top:10px;
+}
+#btn3{
+height:100px;
+width:160px;
+font-family:calisto mt;
+border-radius:6px;
+font-weight:bold;
+font-size:35px;
+background-color:#770c4b;
+color:WHITE;
+border:none;
+margin-left:10px;
+margin-top:10px;
+}
+#btn3:hover{
+box-shadow:8px 8px 13px BLACK;
+cursor:pointer;
+color: #48dbee;
+}
+#inp{
+height:70px;
+width:690px;
+background-color:#3911cc;
+color:whitesmoke;
+border:2px solid black;
+border-radius:6px;
+font-size:30px;
+text-align:right;
+font-weight: 600;
+}
+#inp{
+cursor:not-allowed;
+}
+</style>
+</head>
+<body>
+    <div id="calc">
+<form name="myform">
+<input name="inputVal" type="text" id="inp"
+placeholder="0">
+</form>
+<table>
+<tr>
+<td>
+<input type="button" id="btn1" value="7"
+onclick="insertValue(7)">
+</td>
+<td>
+<input type="button" id="btn1" value="8"
+onclick="insertValue(8)">
+</td>
+<td>
+<input type="button" id="btn1" value="9"
+ onclick="insertValue(9)">
+</td>
+<td>
+<input type="button" id="btn2" value="/"
+  onclick="insertValue('/')">
+</td>
+    </tr>
+    <tr>
+    <td>
+    <input type="button" id="btn1" value="4"
+    onclick="insertValue(4)">
+    </td>
+    <td>
+    <input type="button" id="btn1" value="5"
+    onclick="insertValue(5)">
+    </td>
+    <td>
+    <input type="button" id="btn1" value="6"
+    onclick="insertValue(6)">
+    </td>
+    <td>
+    <input type="button" id="btn2" value="x"
+    onclick="insertValue('*')">
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <input type="button" id="btn1" value="1"
+    onclick="insertValue(1)">
+    </td>
+    <td>
+    <input type="button" id="btn1" value="2"
+    onclick="insertValue(2)">
+    </td>
+    <td>
+    <input type="button" id="btn1" value="3"
+    onclick="insertValue(3)">
+    </td>
+    <td>
+    <input type="button" id="btn2" value="-"
+    onclick="insertValue('-')">
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <input type="button" id="btn3" value="="
+    onclick="claculate()">
+    </td>
+    <td>
+    <input type="button" id="btn1" value="0"
+    onclick="insertValue(0)">
+    </td>
+    <td>
+    <input type="button" id="btn3" value="C"
+    onclick="clearVal()">
+    </td>
+    <td>
+    <input type="button" id="btn2" value="+"
+    onclick="insertValue('+')">
+    </td>
+    </tr>
+</table>
+</div>
+</body>
+</html>
